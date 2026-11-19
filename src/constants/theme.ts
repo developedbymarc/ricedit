@@ -87,6 +87,9 @@ export const Fonts = Platform.select({
   },
 });
 
+/**
+ * Spacing in units of 4
+ */
 export const Spacing = {
   half: 2,
   one: 4,
