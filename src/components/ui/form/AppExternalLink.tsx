@@ -2,9 +2,9 @@ import { Href, Link } from 'expo-router';
 import { openBrowserAsync, WebBrowserPresentationStyle } from 'expo-web-browser';
 import { type ComponentProps } from 'react';
 
-type AppExternalLinkProps = Omit<ComponentProps<typeof Link>, 'href'> & { href: Href & string };
+type TAppExternalLinkProps = Omit<ComponentProps<typeof Link>, 'href'> & { href: Href & string };
 
-export default function AppExternalLink({ href, ...rest }: AppExternalLinkProps) {
+export default function AppExternalLink({ href, ...rest }: TAppExternalLinkProps) {
   return (
     <Link
       target="_blank"
