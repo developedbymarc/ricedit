@@ -64,5 +64,5 @@ export type TAppData = {
   hasSeenWalkthrough: boolean;
 };
 
-export type TActionResult<T> =
-  { success: true; data: T } | { success: false; error: string };
+export type TActionResult<TData, TError> =
+  { success: true; data: TData } | { success: false; error: TError };

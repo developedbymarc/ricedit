@@ -1,4 +1,4 @@
-type AppButtonProps {
+type AppButtonProps = {
 
 }
 

@@ -12,7 +12,7 @@ export type TSignInValues = z.infer<typeof signInSchema>;
 
 export const signUpSchema = z
   .object({
-    name: z.string().trim().min(2, "Name must be at least 2 characters."),
+    userName: z.string().trim().min(2, "userName must be at least 2 characters."),
     email: z.email("Enter a valid email address."),
     password: z.string().min(6, "Use at least 6 characters for the password."),
     confirmPassword: z.string(),
@@ -45,7 +45,6 @@ export type TForgotPasswordValues = z.infer<typeof forgotPasswordSchema>;
 
 export const profileSchema = z.object({
   name: z.string().trim().min(2, "Name must be at least 2 characters."),
-  distro: z.string().min(1, "Choose your distro."),
   bio: z.string().trim().max(120, "Keep the bio under 120 characters."),
 });
 export type TProfileValues = z.infer<typeof profileSchema>;
