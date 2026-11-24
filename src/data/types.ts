@@ -29,7 +29,7 @@ export type TSetup = {
   shell: TShell;
   terminal: TTerminal;
   description: string;
-  // tags: string[];
+  thumbnailUrl?: string; // TODO: once backend is ready, implement a proper image picker + upload
   repoUrl: string;
 };
 

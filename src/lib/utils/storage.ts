@@ -1,10 +1,11 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { randomUUID } from "expo-crypto"
 
 import type { TAppData, TQueueEntry, TReport, TSetup, TUser } from "@/data/types";
 
 const APP_DATA_KEY = "RICEDIT_APP_DATA";
 
-export const uuid = crypto.randomUUID;
+export const uuid = randomUUID;
 
 const reset = async (): Promise<TAppData> => {
   const empty: TAppData = {
